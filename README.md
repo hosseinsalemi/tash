@@ -1,6 +1,6 @@
-# ta.sh
+# :fire: ta.sh
 
-Ta.sh is a **Bash framework** for run tasks and project scripts
+Ta.sh is a **Bash framework** for run tasks and project scripts. Tash is an ancient word means fire.
 
 ## Getting started
 
