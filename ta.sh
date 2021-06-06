@@ -35,7 +35,7 @@ __call_function() {
 }
 
 __source_env_file() {
-  export $(echo $(cat ${ENV_FILE_PATH} | sed 's/#.*//g' | xargs))
+  export $(echo $(cat ${1} | sed 's/#.*//g' | xargs))
 }
 
 __print() {
