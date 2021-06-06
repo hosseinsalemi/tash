@@ -34,6 +34,10 @@ __call_function() {
   fi
 }
 
+__source_env_file() {
+  export $(echo $(cat ${ENV_FILE_PATH} | sed 's/#.*//g' | xargs))
+}
+
 __print() {
   TEXT=${2}
   case ${1} in
