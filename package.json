@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "format": "yarn prettier --write *.sh"
+  },
+  "devDependencies": {
+    "prettier": "^2.3.1",
+    "prettier-plugin-sh": "^0.6.1"
+  }
+}
