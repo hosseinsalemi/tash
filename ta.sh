@@ -28,6 +28,12 @@ __function_exists() {
   return $?
 }
 
+__call_function() {
+  if __function_exists ${1}; then
+    ${1}
+  fi
+}
+
 __print() {
   TEXT=${2}
   case ${1} in
