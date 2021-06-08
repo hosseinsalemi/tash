@@ -2,6 +2,28 @@
 
 Ta.sh is a **Bash framework** for run tasks and project scripts. Tash is an ancient word means fire.
 
+## What is it?
+
+Use one command for all tasks in all your projects.
+
+use
+
+```bash
+app get
+app install
+app start
+app deploy
+```
+
+instead of
+
+```bash
+git pull
+npm install
+npm start
+rsync -r local/ remote
+```
+
 ## Getting started
 
 1. Download `ta.sh` file to root of your project.
@@ -17,11 +39,11 @@ source ta.sh
 
 ```bash
 __hi() {
-    echo "Hello World"
+  echo "Hello World"
 }
 
 __bye() {
-    echo "Goodbye"
+  echo "Goodbye"
 }
 ```
 
@@ -47,8 +69,8 @@ You can install globally by copy below code to `~/.bashrc` or `~/.zshrc` file.
 
 ```bash
 app() {
-    source app.sh
-    __run "$@"
+  source app.sh
+  __run "$@"
 }
 ```
 
@@ -73,7 +95,7 @@ You can add help in `__help` function in your `app.sh`. If you run `app help` or
 
 ```bash
 __help() {
-    echo "This is a help"
+  echo "This is a help"
 }
 ```
 
@@ -95,7 +117,7 @@ return true if a function is exists in `app.sh`.
 
 ```bash
 if __function_exists FUNCTION_NAME; then
-    # some code
+  # some code
 fi
 ```
 
@@ -113,10 +135,10 @@ By built-in subscribers you can run your scripts pre or post `app.sh` commands. 
 
 ```bash
 __pre_app_subscriber() {
-    echo "This method called before any app commands."
+  echo "This method called before any app commands."
 }
 
 __post_app_subscriber() {
-    echo "This method called after any app commands."
+  echo "This method called after any app commands."
 }
 ```
